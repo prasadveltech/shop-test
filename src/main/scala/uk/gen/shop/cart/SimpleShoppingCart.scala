@@ -6,11 +6,8 @@ import uk.gen.shop.products.Product
   * Created by PJAYARAT on 11/08/2016.
   */
 class SimpleShoppingCart extends ShoppingCart{
-  override def addProduct(product: Product) = {
-    throw new NoSuchMethodException
-  }
+  private var cartItems=List.empty[Product]
+  override def addProduct(product: Product) = cartItems =  product :: cartItems
 
-  override def countProducts: Int = {
-    throw new NoSuchMethodException
-  }
+  override def countProducts: Int = cartItems.size
 }
