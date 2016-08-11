@@ -9,3 +9,5 @@ libraryDependencies ++= {
     "org.scalatest" %% "scalatest" % "2.2.6" % Test
   )
 }
+
+mainClass := some("uk.gen.shop.till.Scanner")
