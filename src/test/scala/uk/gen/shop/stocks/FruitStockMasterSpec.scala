@@ -19,6 +19,18 @@ class FruitStockMasterSpec extends FeatureSpec with GivenWhenThen with Matchers{
       apple shouldBe "Apple"
 
     }
+
+    scenario("Test whether Orange exist") {
+      Given("a fruit stock master")
+      val mstr=new FruitStockMaster
+
+      When("check for Orange")
+      val apple = mstr.getProduct("Orange")
+
+      Then("Orange should be available")
+      apple shouldBe "Orange"
+
+    }
   }
 
 }
