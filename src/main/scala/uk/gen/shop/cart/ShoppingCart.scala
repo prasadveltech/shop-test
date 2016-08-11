@@ -10,4 +10,6 @@ trait ShoppingCart {
 
   def countProducts:Int
 
+  def calculateTotal:BigDecimal
+
 }

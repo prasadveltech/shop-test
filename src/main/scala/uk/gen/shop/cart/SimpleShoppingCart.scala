@@ -10,4 +10,8 @@ class SimpleShoppingCart extends ShoppingCart{
   override def addProduct(product: Product) = cartItems =  product :: cartItems
 
   override def countProducts: Int = cartItems.size
+
+  override def calculateTotal: BigDecimal = {
+    throw new NoSuchMethodException
+  }
 }

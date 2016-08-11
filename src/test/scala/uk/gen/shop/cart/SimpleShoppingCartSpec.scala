@@ -33,6 +33,21 @@ class SimpleShoppingCartSpec extends FeatureSpec with GivenWhenThen with Matcher
       simpleCart.countProducts should be(3)
 
     }
+
+    scenario("Test total cost") {
+      Given("a simple shopping cart")
+      val simpleCart = new SimpleShoppingCart
+
+      When("adding 1 apple and 2 orange")
+      simpleCart.addProduct(Apple)
+      simpleCart.addProduct(Orange)
+      simpleCart.addProduct(Orange)
+
+      Then("apple should be available in cart")
+      simpleCart.countProducts should be(3)
+      simpleCart.calculateTotal should be(1.1)
+
+    }
   }
 
 }
