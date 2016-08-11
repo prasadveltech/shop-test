@@ -2,6 +2,7 @@ package uk.gen.shop.till
 
 import org.scalatest.{Matchers, GivenWhenThen, FeatureSpec}
 import uk.gen.shop.products.{Orange, Apple}
+import uk.gen.shop.stocks.FruitStockMaster
 
 /**
   * Created by PJAYARAT on 12/08/2016.
@@ -14,7 +15,8 @@ class CommandLineScannerParserSpec extends FeatureSpec with GivenWhenThen with M
       val scannedItems="Apple,Orange,Apple"
 
       And("scanning items from command line")
-      val scanner = new CommandLineScannerParser
+      val fruitStockMaster = new FruitStockMaster
+      val scanner = new CommandLineScannerParser(fruitStockMaster)
 
       Then("parse the scanned items")
       val itemsList = scanner.parseScannedString(scannedItems)
