@@ -6,5 +6,6 @@ package uk.gen.shop.products
 trait Product {
 
   val name: String
+  val cost: BigDecimal
 
 }

@@ -1,6 +1,6 @@
 package uk.gen.shop.stocks
 
-import uk.gen.shop.products.{Empty, Orange, Apple}
+import uk.gen.shop.products.{Empty, Orange, Apple,Product}
 
 /**
   * Created by PJAYARAT on 11/08/2016.
@@ -8,5 +8,5 @@ import uk.gen.shop.products.{Empty, Orange, Apple}
 class FruitStockMaster extends StockMaster{
 
   private val items=List(Apple,Orange)
-  override def getProduct(productName: String): String = items.find(_.name == productName).getOrElse(Empty).name
+  override def getProduct(productName: String): Product = items.find(_.name == productName).getOrElse(Empty)
 }

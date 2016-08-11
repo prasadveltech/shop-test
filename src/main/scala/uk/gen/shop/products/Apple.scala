@@ -5,4 +5,5 @@ package uk.gen.shop.products
   */
 object Apple extends Product{
   override val name: String = "Apple"
+  override val cost: BigDecimal = 0.6
 }
