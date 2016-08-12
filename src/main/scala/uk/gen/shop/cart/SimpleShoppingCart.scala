@@ -11,7 +11,10 @@ class SimpleShoppingCart extends ShoppingCart{
 
   override def countProducts: Int = cartItems.size
 
-  override def calculateTotal: BigDecimal = {
-    throw new NoSuchMethodException
+  override def calculateTotal: BigDecimal = cartItems.foldLeft(BigDecimal(0)){
+    (total,product) => {
+      product.cost + total
+    }
   }
+
 }
