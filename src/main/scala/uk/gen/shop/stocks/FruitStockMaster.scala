@@ -8,5 +8,5 @@ import uk.gen.shop.products.{Empty, Orange, Apple,Product}
 class FruitStockMaster extends StockMaster{
 
   private val items=List(Apple,Orange)
-  override def getProduct(productName: String): Product = items.find(_.name == productName).getOrElse(Empty)
+  override def getProduct(productName: String): Product = items.find(_.name.toLowerCase == productName.toLowerCase).getOrElse(Empty)
 }
