@@ -13,13 +13,16 @@ Go into project shop-test and type
 sbt run
 
 ## Scan items
-On displaying message "Welcome to till scanner. Enter products to scan =>" at till scan/enter products 
+On displaying message "Welcome to till scanner. Enter products to scan =>" at till, scan/enter products 
 
 For example, 
 "Apple, Orange, Apple, Orange, Apple, Orange"
 
 ## Expected output
-then till shows the normal and offer cart value in sterling pounds
+Till shows the normal and offer cart value in sterling pounds
 
 total simple cart value is 2.55
+
 total offer cart value is 1.70
+
+
