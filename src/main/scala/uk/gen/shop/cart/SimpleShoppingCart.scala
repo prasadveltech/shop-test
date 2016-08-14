@@ -2,12 +2,14 @@ package uk.gen.shop.cart
 
 import uk.gen.shop.products.Product
 
+import scala.collection.mutable
+
 /**
   * Created by PJAYARAT on 11/08/2016.
   */
 class SimpleShoppingCart extends ShoppingCart{
-  private var cartItems=List.empty[Product]
-  override def addProduct(product: Product) = cartItems =  product :: cartItems
+  private val cartItems= mutable.MutableList.empty[Product]
+  override def addProduct(product: Product) =  cartItems += product
 
   override def countProducts: Int = cartItems.size
 
@@ -17,7 +19,7 @@ class SimpleShoppingCart extends ShoppingCart{
     }
   }
 
-  override def cartProducts: List[Product] = cartItems
+  override def cartProducts: List[Product] = cartItems.toList
 
-  override def chargeableCartProducts: List[Product] = cartItems
+  override def chargeableCartProducts: List[Product] = cartItems.toList
 }
