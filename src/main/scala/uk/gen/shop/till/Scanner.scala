@@ -1,7 +1,7 @@
 package uk.gen.shop.till
 
 import uk.gen.shop.cart.SimpleShoppingCart
-import uk.gen.shop.offers.{FruitOffer, Offers}
+import uk.gen.shop.offers.{FruitOffer}
 import uk.gen.shop.stocks.FruitStockMaster
 
 import scala.util.{Failure, Success, Try}
