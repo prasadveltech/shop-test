@@ -17,4 +17,5 @@ class SimpleShoppingCart extends ShoppingCart{
     }
   }
 
+  override def cartProducts: List[Product] = cartItems
 }

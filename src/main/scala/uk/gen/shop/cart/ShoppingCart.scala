@@ -12,4 +12,6 @@ trait ShoppingCart {
 
   def calculateTotal:BigDecimal
 
+  def cartProducts: List[Product]
+
 }
