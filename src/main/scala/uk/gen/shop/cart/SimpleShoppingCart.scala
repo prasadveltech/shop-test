@@ -11,11 +11,13 @@ class SimpleShoppingCart extends ShoppingCart{
 
   override def countProducts: Int = cartItems.size
 
-  override def calculateTotal: BigDecimal = cartItems.foldLeft(BigDecimal(0)){
+  override def calculateTotal: BigDecimal = chargeableCartProducts.foldLeft(BigDecimal(0)){
     (total,product) => {
       product.cost + total
     }
   }
 
   override def cartProducts: List[Product] = cartItems
+
+  override def chargeableCartProducts: List[Product] = cartItems
 }

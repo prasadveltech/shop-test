@@ -14,4 +14,6 @@ trait ShoppingCart {
 
   def cartProducts: List[Product]
 
+  def chargeableCartProducts: List[Product]
+
 }
